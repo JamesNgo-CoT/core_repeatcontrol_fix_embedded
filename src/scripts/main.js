@@ -15,12 +15,20 @@ $(function () {
     id: 'thisform',
 
     success: () => {
-      console.log('SUCCESS');
+      alert('SUCCESS');
     },
 
     sections: [
       {
         rows: [
+          {
+            fields: [
+              {
+                title: 'test',
+                required: true
+              }
+            ]
+          },
           {
             repeatControl: {
               id: 'witnesses',
@@ -41,7 +49,7 @@ $(function () {
                       title: "Name",
                       type: 'text',
                       className: 'col-xs-12 col-sm-4',
-                      required: false,
+                      required: true,
                       htmlAttr: { maxLength: 500 },
                       bindTo: 'witness_name',
                       validators: {
